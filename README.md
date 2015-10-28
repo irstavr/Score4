@@ -1,8 +1,9 @@
 # Score4
 
-Connect4 desktop game in ASP/Java.
+Connect4 desktop game developed in ASP language. 
+GUI for desktops is implemented in Java.
 
-### Game Description: 
+#### Game Description: 
 
 Connect4 is a two-player connection game in which the players first choose a color and <br>
 then take turns dropping colored discs from the top into a seven-column, six-row vertically suspended grid. <br>
