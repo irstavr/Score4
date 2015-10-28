@@ -7,7 +7,6 @@ public class Connect4 {
  
         /**
         * Program:  Connect4
-        * Creator:  Lilitis-Stavrakantonaki-Ymeralli
         * @param args
         */     
  
