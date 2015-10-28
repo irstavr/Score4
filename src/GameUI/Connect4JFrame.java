@@ -118,10 +118,11 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
                 return;
         }
     }
+    
     private void PlaySoundClick(){
         try {
             AudioClip clip = Applet.newAudioClip(
-            new URL("file:/Users/Prodromos/NetBeansProjects/Score4/sound.wav"));
+            new URL("/Score4/misc/sound.wav"));
             clip.play();
         } catch (MalformedURLException murle) {
             System.out.println(murle);
@@ -131,7 +132,7 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
     private void PlaySoundWinner(){
         try {
             AudioClip clip = Applet.newAudioClip(
-            new URL("file:/Users/Prodromos/NetBeansProjects/Score4/winner.wav"));
+            new URL("/Score4/misc/winner.wav"));
             clip.play();
         } catch (MalformedURLException murle) {
             System.out.println(murle);
@@ -141,7 +142,7 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
     private void PlaySoundOver(){
         try {
             AudioClip clip = Applet.newAudioClip(
-            new URL("file:/Users/Prodromos/NetBeansProjects/Score4/over.wav"));
+            new URL("/Score4/misc/over.wav"));
             clip.play();
         } catch (MalformedURLException murle) {
             System.out.println(murle);
@@ -182,7 +183,6 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
     
     private void CallPcToPlay(int row, int col) throws InterruptedException, IOException {
         ExecuteCommandPC();
-       
         int res[] = ReadSelectedCellPC();
         
         if (end) {
@@ -210,7 +210,6 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
         }  
     }
 
-
     private void DisableButton(int c, Button b){
         if (Board[0][c] != BLANK) {
             b.setBackground(null);
@@ -218,6 +217,7 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
             b.disable();
         }
     }
+    
     private void CheckForDisable(){
         DisableButton(0, btn1);
         DisableButton(1, btn2);
@@ -288,7 +288,6 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
         } catch (IOException e) {
         }
         this.filePredicates.close();
-
         return true;
     }
 
@@ -359,7 +358,6 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
         return vals;
     }
     
-    
     private void DisplayWinner(String mes, Color c){
         JFrame frame = new JFrame("Display Winner");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -374,9 +372,5 @@ public final class Connect4JFrame extends JFrame implements ActionListener {
         frame.setBackground(Color.blue);
         frame.setVisible(true);
         end = true;
-      }    
-
-    
+      }
 }
-
-
